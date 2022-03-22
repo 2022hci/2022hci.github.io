@@ -97,7 +97,16 @@ Page Banner START -->
 			</div>
 
 			<div id="adobe-dc-view" style="width: 800px;"></div>
-			<canvas id="the-canvas" style="border:1px solid black;"/>
+			<script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+			<script type="text/javascript">
+				document.addEventListener("adobe_dc_view_sdk.ready", function(){
+					var adobeDCView = new AdobeDC.View({clientId: "d249db63b53946738f2f163b844abcc5", divId: "adobe-dc-view"});
+					adobeDCView.previewFile({
+						content:{location: {url: "https://documentcloud.adobe.com/view-sdk-demo/PDFs/Bodea Brochure.pdf"}},
+						metaData:{fileName: "Bodea Brochure.pdf"}
+					}, {embedMode: "IN_LINE"});
+				});
+			</script>
 
 			<div class="col-md-6 text-center">
 				<!-- Image -->
@@ -510,24 +519,6 @@ Footer END -->
 <!-- Template Functions -->
 <script src="assets/js/functions.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pdfjs-dist@2.13.216/build/pdf.min.js"></script>
-<script>
-	PDFJS.getDocument('訪談題目.pdf').then(function(pdf) {
-		pdf.getPage(1).then(function(page) {
-			var scale = 1.5;
-			var viewport = page.getViewport(scale);
 
-			var canvas = document.getElementById('the-canvas');
-			var context = canvas.getContext('2d');
-			canvas.height = viewport.height;
-			canvas.width = viewport.width;
-
-			var renderContext = {
-				canvasContext: context,
-				viewport: viewport
-			};
-			page.render(renderContext);
-		});
-	});
-</script>
 </body>
 </html>
