@@ -102,6 +102,7 @@
   <!-- Text END -->
 
   <!-- Text START -->
+
   <div class="py-4">
     <!-- About START -->
     <div class="">
@@ -111,13 +112,13 @@
             <!-- Image -->
             <div style="position:relative;">
               <img src="assets/images/about2.png" class="position-relative" alt="" id="teams_member">
-              <a href="Deliverable.html">
-                <div class="d-grid gap-2 col-6 mx-auto" style="width: 200px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px;
-                              background-color: rgba(231, 220, 255, 1); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 30px;
-                              display: inline-flex; flex-direction: row; align-items: center; justify-content: center;
-                              position:absolute;"  id="looksMore">
-                  <p id="looksMoreText" style="font-size: 20px; font-weight: 650; line-height: 140%; text-align: center; color: rgba(71, 35, 158, 1)">瞭解更多</p>
-                </div>
+              <a href="Deliverable.html" id="looksMores">
+<!--                <div class="d-grid gap-2 col-6 mx-auto" style="width: 200px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px;-->
+<!--                              background-color: rgba(231, 220, 255, 1); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 30px;-->
+<!--                              display: inline-flex; flex-direction: row; align-items: center; justify-content: center;-->
+<!--                              position:absolute;"  id="looksMore">-->
+<!--                  <p id="looksMoreText" style="font-size: 20px; font-weight: 650; line-height: 140%; text-align: center; color: rgba(71, 35, 158, 1)">瞭解更多</p>-->
+<!--                </div>-->
               </a>
             </div>
           </div>
@@ -187,12 +188,24 @@
     })
 
     let teamsMember = document.getElementById('teams_member');
-    let looksMore = document.getElementById('looksMore')
+
     let w = teamsMember.clientWidth;
     let h = teamsMember.clientHeight;
-    looksMore.style.left = w/2 - 100 + 'px'
-    looksMore.style.bottom = h/10 + 'px'
+    //looksMore.style.left = w/2 - 100 + 'px'
+    //looksMore.style.bottom = h/10 + 'px'
 
+    w = w/2 - 100 + 'px'
+    h = h/10 + 'px'
+
+    let g = document.getElementById("looksMores");
+    g.innerHTML = `<div class="d-grid gap-2 col-6 mx-auto" style="width: 200px; height: 50px; padding-left: 24px; padding-right: 24px; padding-top: 12px; padding-bottom: 12px;
+                              background-color: rgba(231, 220, 255, 1); box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25); border-radius: 30px;
+                              display: inline-flex; flex-direction: row; align-items: center; justify-content: center;
+                              position:absolute; left:${w}; bottom:${h}"  id="looksMore">
+                  <p id="looksMoreText" style="font-size: 20px; font-weight: 650; line-height: 140%; text-align: center; color: rgba(71, 35, 158, 1)">瞭解更多</p>
+                </div>`
+
+    let looksMore = document.getElementById('looksMore')
     let looksMoreText = document.getElementById('looksMoreText');
     looksMore.addEventListener('mouseover', function () {
       looksMore.style.boxShadow = '0px 4px 20px rgba(196, 196, 196, 0.80)';
@@ -207,6 +220,7 @@
     })
 
   })
+
 </script>
 
 
