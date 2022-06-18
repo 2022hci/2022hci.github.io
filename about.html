@@ -187,12 +187,12 @@
       this.style.color = 'rgba(50, 50, 50, 1)';
     })
 
-    let teamsMember = document.getElementById('teams_member');
+  })
 
+  $(window).on("load", function(){
+    let teamsMember = document.getElementById('teams_member');
     let w = teamsMember.clientWidth;
     let h = teamsMember.clientHeight;
-    //looksMore.style.left = w/2 - 100 + 'px'
-    //looksMore.style.bottom = h/10 + 'px'
 
     w = w/2 - 100 + 'px'
     h = h/10 + 'px'
@@ -218,8 +218,7 @@
       looksMore.style.borderColor = 'rgba(71, 35, 158, 1)';
       looksMoreText.style.color = 'rgba(71, 35, 158, 1)';
     })
-
-  })
+  });
 
 </script>
 
