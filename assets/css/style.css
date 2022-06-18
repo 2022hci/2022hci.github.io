@@ -19794,8 +19794,8 @@ small,
           transform: translateY(50%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  background: rgba(6, 106, 201, 0.2);
-  color: #066ac9;
+  background: rgba(248, 245, 255, 0.99);
+  color: #47239E;
   border-radius: 10%;
   width: 52px;
   height: 52px;
@@ -19807,7 +19807,7 @@ small,
   vertical-align: middle;
 }
 .back-top:hover {
-  background: #066ac9;
+  background: #47239E;
   color: #fff;
 }
 .back-top.back-top-show {
