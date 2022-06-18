@@ -190,15 +190,14 @@
   })
 
 
-  var img = document.querySelector('img')
+  var img = document.getElementById('teams_member')
 
   function loaded() {
     let teamsMember = document.getElementById('teams_member');
     let w = teamsMember.clientWidth;
     let h = teamsMember.clientHeight;
-    if(w === 0){
-      loaded();
-    }
+    console.log(w,h)
+    
     w = w/2 - 100 + 'px'
     h = h/10 + 'px'
 
