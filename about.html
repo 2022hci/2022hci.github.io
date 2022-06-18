@@ -196,6 +196,9 @@
     let teamsMember = document.getElementById('teams_member');
     let w = teamsMember.clientWidth;
     let h = teamsMember.clientHeight;
+    if(w === 0){
+      loaded();
+    }
     w = w/2 - 100 + 'px'
     h = h/10 + 'px'
 
